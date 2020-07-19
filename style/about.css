@@ -35,12 +35,12 @@ html {
 
 /* Hover code for button */
 header a:hover {
-    color: white;
+    color: #7FFFD4;
     background-color: #002935;
     transition: 2s;
 }
 
-.bottomSection a:hover {
+.aboutContent a:hover {
     color: white;
     background-color: #002935;
     transition: 2s; 
@@ -95,16 +95,13 @@ header a {
     justify-content: space-around;
 }
 .smallPic {
+    text-align: center;
     margin: 20px;
     width: 200px;
     box-shadow: 10px 10px 5px #ccc;
     -moz-box-shadow: 10px 10px 5px #ccc;
     -webkit-box-shadow: 10px 10px 5px #ccc;
     -khtml-box-shadow: 10px 10px 5px #ccc;
-}
-
-.smallPic img {
-    border-radius: 30px;
 }
 
 .mainPic {
