@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 /* every element is a border-box */
 * {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 html {
@@ -66,7 +67,7 @@ p {
 
 /* Header Section */
 header h1 {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -86,7 +87,7 @@ header a {
 }
 
 header h2 {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 /* Project Slider Section */
@@ -109,8 +110,8 @@ header h2 {
 
 .h3Section {
     padding: 25px;
-    width: 80%;
-    font-size: 20px;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
 .bottomSection img {
@@ -124,15 +125,15 @@ header h2 {
 
 .bottomSection {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    
 }
 
 .bottomSectionDiv {
     background-color: white;
-    height: 300px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .bottomSectionDiv img {
@@ -140,17 +141,13 @@ header h2 {
     object-fit: cover;
 }
 
-.bottomSectionDiv img:hover {
-    height: 310px;
-    transition: 1.5s;
-}
 
 /* Projects info Section */
 
 .bottomSection p {
-    font-size: 20px;
+    font-size: 1.5rem;
     padding: 20px;
-    width: 190px;
+    /* width: 85%; */
 }
 .bottomSection a {
     color: #551A8B;
@@ -180,4 +177,66 @@ footer a {
     border:solid;
     width:100px; 
     padding: 5px;
+}
+
+/* Tablet Devices */
+
+    /* Body Section */
+@media only screen and (max-width: 800px) {
+    body {
+        width: 100%;
+        margin: 0px;
+    }
+
+    /* bottom section */
+    .bottomSectionDiv {
+        flex-flow: column;        
+    }
+
+    .h3Section {
+        width: 100%;
+    }
+}
+
+/* Phone Devices */
+
+@media only screen and (max-width: 500px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a {
+        width: 300px;
+        height: 50px;
+    }
+
+    .projectSlider img {
+        height: 300px;
+    }
+
+    .bottomSectionDiv {
+        flex-direction: column;
+    }
+
+    .bottomSectionDiv div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottomSectionDiv img {
+        width: 180px;
+    }
+
+    .bottomSectionNav   {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav{
+        flex-direction: row;
+    }
 }
