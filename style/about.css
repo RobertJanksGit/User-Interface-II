@@ -59,6 +59,8 @@ h2 {
 body {
     background-color:white;
     width: 60%;
+    max-width: 890px;
+    min-width: 547px;
     margin: 0 auto;
 }
 

@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 /* every element is a border-box */
 * {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 html {
@@ -36,7 +37,7 @@ html {
 /* Body Section */
 body {
     background-color:white;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -57,25 +58,29 @@ footer a:hover {
 header {
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 header h1 {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 nav {
     width:40%;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 header a {
+    text-align: center;
     background-color: #0093BB;
     color: #551A8B;
     text-decoration: none;
     border:solid;
-    width:100px;
+    width:300px;
+    height: 50px;
     padding: 5px; 
 }
 
@@ -98,20 +103,27 @@ header a {
 }
 
 .gallery {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .smallImg {
+    margin-right: 20px;
     text-align: center;
     background-color: white;
-    margin: 50px;
-    width: 200px;
+    width: 150px;
+    border-bottom-width: 100%;
     box-shadow: 10px 10px 5px #ccc;
     -moz-box-shadow: 10px 10px 5px #ccc;
     -webkit-box-shadow: 10px 10px 5px #ccc;
     -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+
+.smallImg img {
+    width: 100%;
 }
 
 /* Footer Section */
@@ -125,6 +137,12 @@ footer {
     justify-content: space-around;
 }
 
+footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 footer a {
     background-color: #0093BB;
     color: #551A8B;
@@ -132,4 +150,45 @@ footer a {
     border:solid;
     width:100px; 
     padding: 5px;
+}
+
+/* Tablet Devices */
+
+@media only screen and (min-width: 615px) {
+
+    body {
+        width: 100%
+    }
+
+    header nav {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .smallImg {
+        margin-right: 0px;
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        width: 730px;
+        margin: 0 auto;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header a {
+        width:100px;
+        padding: 5px; 
+        height: 34px;
+    }
+
+    .smallImg {
+        width: 200px;
+    }
+
 }
